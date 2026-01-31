@@ -1,7 +1,5 @@
 streamlit
 speechrecognition
-sounddevice
-soundfile
 requests
 gtts
 numpy
