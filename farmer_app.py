@@ -1,7 +1,7 @@
 import streamlit as st
-import speech_recognition as sr
+'''import speech_recognition as sr
 import sounddevice as sd
-import soundfile as sf
+import soundfile as sf'''
 from gtts import gTTS
 import requests
 import os
@@ -168,6 +168,11 @@ def speak(text):
         return "reply.mp3"
     except:
         return None
+problem_text = input("Mee problem type cheyyandi: ").lower()
+
+if not problem_text:
+    problem_text = "general problem"
+
 
 # ===============================
 # 🚜 Streamlit App
@@ -208,4 +213,5 @@ if problem_text:
         audio_file = speak(step.strip())
         if audio_file:
             st.audio(audio_file)
+
         time.sleep(1)
